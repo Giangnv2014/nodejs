@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>User list</title>
+    <!--Load bootstrap.css file-->
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>User list</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each users}}
+                <tr>
+                  <th scope="row">{{ id }}</th>
+                  <td>{{ name }}</td>
+                  <td>{{ email }}</td>
+                  <td>
+                    <a href="javascript:void(0);" class="btn btn-sm btn-info edit">Edit</a>
+                    <a href="javascript:void(0);" class="btn btn-sm btn-danger delete">Delete</a>
+                  </td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+          <a href="/users/create" class="btn btn-sm btn-info">Create</a>
+        </div>
+      </div>
+    </div>
+
+    <!--Load bootstrap.js file-->
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
